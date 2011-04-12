@@ -27,6 +27,11 @@ def application(environ, start_response):
             out_string = form['q'].value # Client sending a sync.  Requesting text return.
         elif form.has_key('p'):
             out_string = form['p'].value # Client sending a sync.  Requesting JS return.
+        else:
+            # Nothing. Redirect to the editor.
+            response_headers = [ ('Location', environ['SCRIPT_NAME']+'?editor') ]
+            start_response('303 See Other', response_headers)
+            return []
         
         in_string = ""
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
