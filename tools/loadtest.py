@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """MobWrite Load Tester
 
 Copyright 2009 Google Inc.

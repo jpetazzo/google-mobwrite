@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """MobWrite Uploader
 
 Copyright 2009 Google Inc.
